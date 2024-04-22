@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-key */
 import { useState } from "react";
 import "./App.css";
 import Table from "./components/Table";
@@ -11,10 +13,7 @@ function App() {
 
   return (
     <>
-      <div style={{ display: "flex", padding: "20px" }}>
-        {netIncomes.map((netIncome) => ( <Table netIncome={netIncome} netIncomes={netIncomes}/>
-        ))}
-      </div>
+      <Table netIncomes={netIncomes}/>
       <p style={{textAlign: "center", padding: "2rem", margin: "auto", fontSize: "1.7rem" }}>
         Total income: ${netIncomes.reduce((accumulator, nextElement) => accumulator + nextElement.income,0)}</p>
     </>

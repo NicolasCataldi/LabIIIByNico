@@ -1,20 +1,31 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-key */
 import React from "react";
 
-function Table({netIncome}) {
+function Table({ netIncomes }) {
   return (
-    <table style={{padding:"2rem", margin:"auto", fontSize:"1.7rem"}}>
+    <table style={{display:"flex"}}>
 
-      <thead>
-        <tr>
-          <th>{netIncome.brand}</th>
-        </tr>
-      </thead>
+      {netIncomes.map((netIncome) =>
 
-      <tbody>
-        <tr>
-          <td>${netIncome.income}</td>
-        </tr>
-      </tbody>
+        <>
+          <thead style={{margin: "auto", fontSize: "1.7rem" }}>
+            <tr>
+              <th>{netIncome.brand}</th>
+            </tr>
+          </thead>
+
+          <tbody style={{margin: "auto", fontSize: "1.7rem" }}>
+            <tr>
+              <td>${netIncome.income}</td>
+            </tr>
+          </tbody>
+        </>
+
+      )}
+
+
 
     </table>
   );
