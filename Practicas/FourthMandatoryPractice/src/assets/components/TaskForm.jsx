@@ -8,7 +8,7 @@ const handleTask = (e) => {
   e.preventDefault()
 
 
-  if(task != ""){
+  if(task.name.trim() != ""){
     setToDoList([...toDoList,task])
     setTask("")
     document.querySelector("#taskInput").value = ""
